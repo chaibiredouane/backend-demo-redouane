@@ -31,6 +31,11 @@ public class PersonController {
         return ResponseEntity.ok(personRepo.findAll());
     }
 
+    @GetMapping("/name")
+    public ResponseEntity<List<PersonEntity>> getPersonByName(String name) {
+        return ResponseEntity.ok(personRepo.findByNameIgnoreCase(name));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<PersonEntity> getPerson(@PathVariable int id) {
         Optional<PersonEntity> e = personRepo.findById(id);

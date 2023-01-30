@@ -1,5 +1,6 @@
 package com.redouane.RedouaneDemo.persistence.entity;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,4 +31,7 @@ public class PersonEntity {
 
     @Column(name="email")
     private String email;
+
+    @Column(name="state")
+    private Boolean state;
 }
